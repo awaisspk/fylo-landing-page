@@ -4,17 +4,19 @@ import React from 'react';
 
 const StyledButton = styled(motion.button, {
   border: 'none',
-  linearGradient: ['$brand', '$blue0'],
-  color: '$white',
+  color: 'white',
   fontFamily: 'Inter',
-  fontSize: '$1',
-  fontWeight: '$500',
+  fontSize: '$2',
+  fontWeight: '$600',
   display: 'inline-flex',
   justifyContent: 'center',
   alignItems: 'center',
-  borderRadius: '$full',
+  borderRadius: '$lg',
   userSelect: 'none',
   WebkitTapHighlightColor: 'transparent',
+  height: '40px',
+  width: 'min(200px,100%)',
+  backgroundColor: '$brightBlue',
 
   '& svg': {
     marginRight: '0.5rem',
@@ -25,18 +27,6 @@ const StyledButton = styled(motion.button, {
       outline: 'none',
       boxShadow:
         '0 20px 40px hsla(176, 68%, 64%,0.5) 0 0 0 3px  hsla(176, 68%, 64%,0.3)',
-    },
-  },
-
-  variants: {
-    variant: {
-      circle: {
-        py: '$5',
-        px: '$5',
-        backgroundColor: 'white',
-        borderRadius: '$full',
-        alignSelf: 'center',
-      },
     },
   },
 });
@@ -72,7 +62,9 @@ export const Button: React.FC<Props> = ({icon, children, ...rest}) => {
         whileHover="hover"
         whileTap="tap"
         {...rest}
-      ></StyledButton>
+      >
+        {children}
+      </StyledButton>
     </>
   );
 };
