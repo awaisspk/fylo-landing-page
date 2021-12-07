@@ -21,9 +21,9 @@ type Alignements =
   | 'legacy left'
   | 'legacy center';
 
-interface Props extends React.HTMLAttributes<HTMLElement> {
+interface Props extends React.ComponentProps<typeof StyledGrid> {
   as?: React.ElementType;
-  children: React.ReactNode | React.ReactNodeArray;
+  children: React.ReactNode;
   gap?: number | string;
   columnGap?: number | string;
   rowGap?: number | string;
@@ -55,6 +55,7 @@ const Grid = (props: Props) => {
     alignItems,
     justifyContent,
     justifyItems,
+    css,
     ...rest
   } = props;
 
@@ -79,6 +80,7 @@ const Grid = (props: Props) => {
         alignItems,
         justifyContent,
         justifyItems,
+        ...css,
       }}
       {...rest}
     >

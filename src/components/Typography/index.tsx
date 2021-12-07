@@ -1,1 +1,20 @@
-export {Typography} from './Typography';
+export {
+  Em,
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
+  Ins,
+  Link,
+  Mark,
+  Text,
+  Quote,
+  Small,
+  Title,
+  Strong,
+  Deleted,
+  ListItem,
+  Paragraph,
+} from './Typography';
