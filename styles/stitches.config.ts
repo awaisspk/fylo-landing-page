@@ -3,10 +3,17 @@ import type * as Stitches from '@stitches/react';
 
 const StitchesConfig = createStitches({
   theme: {
-    colors: {},
+    colors: {
+      brightBlue: 'hsl(224, 93%, 58%)',
+      moderateCyan: 'hsl(170, 45%, 43%)',
+      veryDarkBlue: 'hsl(243, 87%, 12%)',
+      desaturatedBlue: 'hsl(238, 22%, 44%)',
+      LightGrayishBlue: 'hsl(240, 75%, 98%)',
+      LightGray: 'hsl(0, 0%, 75%)',
+    },
 
     fonts: {
-      primary: '', // set your font
+      primary: 'Inter', // set your font
     },
 
     fontSizes: {
@@ -275,6 +282,11 @@ const StitchesConfig = createStitches({
     size: (value: Stitches.PropertyValue<'width'>) => ({
       width: value,
       height: value,
+    }),
+    flexCenter: (value: true) => ({
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
     }),
   },
 });
