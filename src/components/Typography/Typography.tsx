@@ -22,6 +22,14 @@ const text = css({
       9: {fontSize: '$9'},
     },
     // other variants like color, weight, style, line-height etc.
+    textAlign: {
+      center: {
+        textAlign: 'center',
+      },
+      start: {
+        textAlign: 'start',
+      },
+    },
   },
 });
 
@@ -46,8 +54,24 @@ export const Mark = styled('mark', text, {backgroundColor: '$yellow3'});
 
 // define additional variants where necessary
 export const Link = styled('a', text, {
+  cursor: 'pointer',
+
+  '&:hover': {
+    textDecoration: 'underline',
+  },
+
   variants: {
-    // link styles like color, text-decoration etc.
+    variant: {
+      primary: {
+        textDecoration: 'underline',
+        fontSize: '$3',
+        color: '$moderateCyan',
+
+        '&:hover': {
+          textDecoration: 'none',
+        },
+      },
+    },
   },
 });
 
@@ -55,5 +79,15 @@ export const Title = styled('h1', {
   color: '$gray12',
   fontSize: 'clamp(1.5rem,3vw + 0.1rem, 2rem)',
   lineHeight: '1.4',
-  '@bp2': {},
+  variants: {
+    textAlign: {
+      center: {
+        textAlign: 'center',
+      },
+
+      start: {
+        textAlign: 'start',
+      },
+    },
+  },
 });
