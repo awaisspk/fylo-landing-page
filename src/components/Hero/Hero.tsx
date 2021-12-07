@@ -20,9 +20,10 @@ const Main = styled('main', {
 
 const Wrapper = styled('div', {
   // minH: '100vh',
+  mt: '100px',
 });
 
-const ImageContainer = styled('div', {
+export const ImageContainer = styled('div', {
   width: 'min(400px,100%)',
   position: 'relative',
   display: 'flex',
